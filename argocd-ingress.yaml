@@ -1,14 +1,13 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: springtest
+  name: argocd
 spec:
   rules:
   - host: cwsh.top
     http:
       paths:
-      - path: /springboot-hello
+      - path: /argocd
         backend:
-          serviceName: springboot-hello
+          serviceName: argocd-server
           servicePort: 80
-
