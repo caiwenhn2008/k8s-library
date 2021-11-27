@@ -1,14 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: springtest
+  name: kubia
 spec:
+  tls:
+  - hosts:
+    - kubia.cwsh.top
+    secretName: tls-secret
   rules:
-  - host: cwsh.top
+  - host: kubia.cwsh.top
     http:
       paths:
-      - path: /springboot-hello
+      - path: /
         backend:
-          serviceName: springboot-hello
+          serviceName: kubia
           servicePort: 80
-
