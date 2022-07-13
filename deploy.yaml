@@ -276,13 +276,13 @@ spec:
     - name: http
       port: 80
       protocol: TCP
-      nodePort: 80
+      nodePort: 30001
       targetPort: http
       appProtocol: http
     - name: https
       port: 443
       protocol: TCP
-      nodePort: 443
+      nodePort: 30002
       targetPort: https
       appProtocol: https
   selector:
